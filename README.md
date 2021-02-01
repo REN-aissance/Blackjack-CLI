@@ -1,5 +1,6 @@
 # Blackjack-CLI
 ## Simple terminal application for playing Blackjack
+###### Made by REN 2021-01-30
 
 ### Requires Java installation and working terminal emulator
 
