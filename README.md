@@ -1,14 +1,13 @@
 # Blackjack-CLI
-Simple terminal application for playing Blackjack
+## Simple terminal application for playing Blackjack
 
-Requires Java installation and working terminal emulator
+### Requires Java installation and working terminal emulator
 
-To play:
-Download Blackjack.jar
-Open terminal emulator
-run "java -jar /path/to/Blackjack.jar"
+### To play:
+- download Blackjack.jar
+- open terminal emulator
+- run ```java -jar /path/to/Blackjack.jar```
 
-Optionally, add:
-alias bj='java -jar /path/to/Blackjack.jar'
-To ~/.bashrc on Linux
-Then run "bj" in the terminal to play any time
+### Quick play (optional):
+- add ```alias bj='java -jar /path/to/Blackjack.jar'``` to ```~/.bashrc``` on Linux
+- then run ```bj``` in the terminal to play any time
