@@ -2,7 +2,7 @@ package blackjack;
 
 public class Deck {
 
-	public Card[] cards;
+	private Card[] cards;
 	public int topCard = 0;
 
 	Deck(int d) {
@@ -12,7 +12,7 @@ public class Deck {
 		}
 	}
 	
-	public void swap(Card[] arr, int i, int j) {
+	private void swap(Card[] arr, int i, int j) {
 		Card tmp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = tmp;
@@ -30,9 +30,16 @@ public class Deck {
 		return cards[topCard];
 	}
 	
+	public int size() {
+		return cards.length;
+	}
+	
+	/**
+	 * Debug only
+	 */
 	public void print() {
 		for (Card c : cards) {
-			c.print();
+			System.out.print(c);
 		}
 	}
 }

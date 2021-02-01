@@ -2,17 +2,17 @@ package blackjack;
 
 public class Card {
 
-	public static String[] suits = { "♥", "♠", "♣", "♦" };
+	private static String[] suits = { "♥", "♠", "♣", "♦" };
 
 	public int id;
-	public String suit;
+	private String suit;
 
 	Card(int i, int s) {
 		id = i;
 		suit = suits[s];
 	}
 
-	public int getValue(int hand) {
+	public int getValue(int hand) { //requires previous hand score for ace calc.
 		if (hand <= 10 && id == 1) {
 			return 11;
 		} else if (id >= 1 && id <= 10) {
@@ -30,26 +30,32 @@ public class Card {
 		}
 	}
 
-	public void print() {
-		String value = "INVALID";
+	@Override
+	public String toString() {
+		String name = null;
+		name = getNameFromID(name);
+		return (name + suit + " ");
+	}
+
+	private String getNameFromID(String name) {
 		if (id >= 2 && id <= 10) {
-			value = Integer.toString(id);
+			name = Integer.toString(id);
 		} else {
 			switch (id) {
 			case 1:
-				value = "A";
+				name = "A";
 				break;
 			case 11:
-				value = "J";
+				name = "J";
 				break;
 			case 12:
-				value = "Q";
+				name = "Q";
 				break;
 			case 13:
-				value = "K";
+				name = "K";
 				break;
 			}
 		}
-		System.out.print(value + suit + " ");
+		return name;
 	}
 }
